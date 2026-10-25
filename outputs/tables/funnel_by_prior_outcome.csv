@@ -1,0 +1,4 @@
+poutcome,contacted,engaged_pct,interested_pct,subscribed_pct,engaged_to_interested_pct,interested_to_sub_pct
+failure,4252,90.62,49.67,14.23,54.8,28.6
+nonexistent,35551,89.14,48.92,8.83,54.9,18.1
+success,1373,98.18,71.01,65.11,72.3,91.7

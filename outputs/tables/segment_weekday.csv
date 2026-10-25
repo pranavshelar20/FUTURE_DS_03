@@ -1,0 +1,6 @@
+day_of_week,contacts,conversions,avg_attempts,total_calls,avg_duration,conv_rate_pct,calls_per_conversion,share_of_contacts_pct,share_of_conversions_pct,lift_vs_avg
+mon,8512,847,2.6,22523,246.6,10.0,26.6,20.7,18.3,0.9
+tue,8086,953,2.4,19628,260.5,11.8,20.6,19.6,20.5,1.0
+wed,8134,949,2.4,19927,265.9,11.7,21.0,19.8,20.5,1.0
+thu,8618,1044,2.6,22372,265.8,12.1,21.4,20.9,22.5,1.1
+fri,7826,846,2.7,21285,252.7,10.8,25.2,19.0,18.2,1.0

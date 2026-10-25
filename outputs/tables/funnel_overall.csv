@@ -1,0 +1,5 @@
+stage,users,pct_of_contacted,step_conversion_pct,step_dropoff_pct,users_lost
+Contacted,41176,100.0,100.0,0.0,0
+Engaged (>60s),36892,89.6,89.6,10.4,4284
+Interested (>180s),20480,49.74,55.51,44.49,16412
+Subscribed,4639,11.27,22.65,77.35,15841

@@ -1,0 +1,4 @@
+poutcome,contacts,conversions,avg_attempts,total_calls,avg_duration,conv_rate_pct,calls_per_conversion,share_of_contacts_pct,share_of_conversions_pct,lift_vs_avg
+success,1373,894,1.8,2483,320.9,65.1,2.8,3.3,19.3,5.8
+failure,4252,605,2.0,8526,248.1,14.2,14.1,10.3,13.0,1.3
+nonexistent,35551,3140,2.7,94726,257.1,8.8,30.2,86.3,67.7,0.8

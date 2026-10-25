@@ -1,0 +1,930 @@
+{
+ "kpi": {
+  "contacts": 41176,
+  "conversions": 4639,
+  "conv_rate": 11.27,
+  "engaged_rate": 89.6,
+  "interested_rate": 49.74,
+  "avg_calls_per_contact": 2.57,
+  "calls_per_conv": 22.8
+ },
+ "funnel": [
+  {
+   "stage": "Contacted",
+   "users": 41176,
+   "pct_of_contacted": 100.0,
+   "step_conversion_pct": 100.0,
+   "step_dropoff_pct": 0.0,
+   "users_lost": 0
+  },
+  {
+   "stage": "Engaged (>60s)",
+   "users": 36892,
+   "pct_of_contacted": 89.6,
+   "step_conversion_pct": 89.6,
+   "step_dropoff_pct": 10.4,
+   "users_lost": 4284
+  },
+  {
+   "stage": "Interested (>180s)",
+   "users": 20480,
+   "pct_of_contacted": 49.74,
+   "step_conversion_pct": 55.51,
+   "step_dropoff_pct": 44.49,
+   "users_lost": 16412
+  },
+  {
+   "stage": "Subscribed",
+   "users": 4639,
+   "pct_of_contacted": 11.27,
+   "step_conversion_pct": 22.65,
+   "step_dropoff_pct": 77.35,
+   "users_lost": 15841
+  }
+ ],
+ "funnel_channel": [
+  {
+   "contact": "cellular",
+   "contacted": 26135,
+   "engaged_pct": 91.34,
+   "interested_pct": 50.29,
+   "subscribed_pct": 14.74,
+   "engaged_to_interested_pct": 55.1,
+   "interested_to_sub_pct": 29.3
+  },
+  {
+   "contact": "telephone",
+   "contacted": 15041,
+   "engaged_pct": 86.56,
+   "interested_pct": 48.78,
+   "subscribed_pct": 5.23,
+   "engaged_to_interested_pct": 56.4,
+   "interested_to_sub_pct": 10.7
+  }
+ ],
+ "funnel_prior": [
+  {
+   "poutcome": "failure",
+   "contacted": 4252,
+   "engaged_pct": 90.62,
+   "interested_pct": 49.67,
+   "subscribed_pct": 14.23,
+   "engaged_to_interested_pct": 54.8,
+   "interested_to_sub_pct": 28.6
+  },
+  {
+   "poutcome": "nonexistent",
+   "contacted": 35551,
+   "engaged_pct": 89.14,
+   "interested_pct": 48.92,
+   "subscribed_pct": 8.83,
+   "engaged_to_interested_pct": 54.9,
+   "interested_to_sub_pct": 18.1
+  },
+  {
+   "poutcome": "success",
+   "contacted": 1373,
+   "engaged_pct": 98.18,
+   "interested_pct": 71.01,
+   "subscribed_pct": 65.11,
+   "engaged_to_interested_pct": 72.3,
+   "interested_to_sub_pct": 91.7
+  }
+ ],
+ "waste": {
+  "calls_share_att5plus": 38.2,
+  "contacts_att5plus": 4984,
+  "conv_att5plus": 306,
+  "conv_share_att5plus": 6.6,
+  "rate_att5plus": 6.14,
+  "rate_att1": 13.04
+ },
+ "seg": {
+  "channel": [
+   {
+    "contact": "cellular",
+    "contacts": 26135,
+    "conversions": 3852,
+    "conv_rate_pct": 14.7,
+    "lift_vs_avg": 1.3,
+    "calls_per_conversion": 16.3,
+    "share_of_contacts_pct": 63.5,
+    "share_of_conversions_pct": 83.0
+   },
+   {
+    "contact": "telephone",
+    "contacts": 15041,
+    "conversions": 787,
+    "conv_rate_pct": 5.2,
+    "lift_vs_avg": 0.5,
+    "calls_per_conversion": 54.5,
+    "share_of_contacts_pct": 36.5,
+    "share_of_conversions_pct": 17.0
+   }
+  ],
+  "month": [
+   {
+    "month": "mar",
+    "contacts": 546,
+    "conversions": 276,
+    "conv_rate_pct": 50.6,
+    "lift_vs_avg": 4.5,
+    "calls_per_conversion": 4.4,
+    "share_of_contacts_pct": 1.3,
+    "share_of_conversions_pct": 5.9
+   },
+   {
+    "month": "apr",
+    "contacts": 2631,
+    "conversions": 539,
+    "conv_rate_pct": 20.5,
+    "lift_vs_avg": 1.8,
+    "calls_per_conversion": 9.5,
+    "share_of_contacts_pct": 6.4,
+    "share_of_conversions_pct": 11.6
+   },
+   {
+    "month": "may",
+    "contacts": 13767,
+    "conversions": 886,
+    "conv_rate_pct": 6.4,
+    "lift_vs_avg": 0.6,
+    "calls_per_conversion": 37.9,
+    "share_of_contacts_pct": 33.4,
+    "share_of_conversions_pct": 19.1
+   },
+   {
+    "month": "jun",
+    "contacts": 5318,
+    "conversions": 559,
+    "conv_rate_pct": 10.5,
+    "lift_vs_avg": 0.9,
+    "calls_per_conversion": 29.2,
+    "share_of_contacts_pct": 12.9,
+    "share_of_conversions_pct": 12.1
+   },
+   {
+    "month": "jul",
+    "contacts": 7169,
+    "conversions": 648,
+    "conv_rate_pct": 9.0,
+    "lift_vs_avg": 0.8,
+    "calls_per_conversion": 35.0,
+    "share_of_contacts_pct": 17.4,
+    "share_of_conversions_pct": 14.0
+   },
+   {
+    "month": "aug",
+    "contacts": 6176,
+    "conversions": 655,
+    "conv_rate_pct": 10.6,
+    "lift_vs_avg": 0.9,
+    "calls_per_conversion": 25.1,
+    "share_of_contacts_pct": 15.0,
+    "share_of_conversions_pct": 14.1
+   },
+   {
+    "month": "sep",
+    "contacts": 570,
+    "conversions": 256,
+    "conv_rate_pct": 44.9,
+    "lift_vs_avg": 4.0,
+    "calls_per_conversion": 3.9,
+    "share_of_contacts_pct": 1.4,
+    "share_of_conversions_pct": 5.5
+   },
+   {
+    "month": "oct",
+    "contacts": 717,
+    "conversions": 315,
+    "conv_rate_pct": 43.9,
+    "lift_vs_avg": 3.9,
+    "calls_per_conversion": 3.5,
+    "share_of_contacts_pct": 1.7,
+    "share_of_conversions_pct": 6.8
+   },
+   {
+    "month": "nov",
+    "contacts": 4100,
+    "conversions": 416,
+    "conv_rate_pct": 10.2,
+    "lift_vs_avg": 0.9,
+    "calls_per_conversion": 18.8,
+    "share_of_contacts_pct": 10.0,
+    "share_of_conversions_pct": 9.0
+   },
+   {
+    "month": "dec",
+    "contacts": 182,
+    "conversions": 89,
+    "conv_rate_pct": 48.9,
+    "lift_vs_avg": 4.3,
+    "calls_per_conversion": 4.4,
+    "share_of_contacts_pct": 0.4,
+    "share_of_conversions_pct": 1.9
+   }
+  ],
+  "weekday": [
+   {
+    "day_of_week": "mon",
+    "contacts": 8512,
+    "conversions": 847,
+    "conv_rate_pct": 10.0,
+    "lift_vs_avg": 0.9,
+    "calls_per_conversion": 26.6,
+    "share_of_contacts_pct": 20.7,
+    "share_of_conversions_pct": 18.3
+   },
+   {
+    "day_of_week": "tue",
+    "contacts": 8086,
+    "conversions": 953,
+    "conv_rate_pct": 11.8,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 20.6,
+    "share_of_contacts_pct": 19.6,
+    "share_of_conversions_pct": 20.5
+   },
+   {
+    "day_of_week": "wed",
+    "contacts": 8134,
+    "conversions": 949,
+    "conv_rate_pct": 11.7,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 21.0,
+    "share_of_contacts_pct": 19.8,
+    "share_of_conversions_pct": 20.5
+   },
+   {
+    "day_of_week": "thu",
+    "contacts": 8618,
+    "conversions": 1044,
+    "conv_rate_pct": 12.1,
+    "lift_vs_avg": 1.1,
+    "calls_per_conversion": 21.4,
+    "share_of_contacts_pct": 20.9,
+    "share_of_conversions_pct": 22.5
+   },
+   {
+    "day_of_week": "fri",
+    "contacts": 7826,
+    "conversions": 846,
+    "conv_rate_pct": 10.8,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 25.2,
+    "share_of_contacts_pct": 19.0,
+    "share_of_conversions_pct": 18.2
+   }
+  ],
+  "job": [
+   {
+    "job": "student",
+    "contacts": 875,
+    "conversions": 275,
+    "conv_rate_pct": 31.4,
+    "lift_vs_avg": 2.8,
+    "calls_per_conversion": 6.7,
+    "share_of_contacts_pct": 2.1,
+    "share_of_conversions_pct": 5.9
+   },
+   {
+    "job": "retired",
+    "contacts": 1718,
+    "conversions": 434,
+    "conv_rate_pct": 25.3,
+    "lift_vs_avg": 2.2,
+    "calls_per_conversion": 9.8,
+    "share_of_contacts_pct": 4.2,
+    "share_of_conversions_pct": 9.4
+   },
+   {
+    "job": "unemployed",
+    "contacts": 1014,
+    "conversions": 144,
+    "conv_rate_pct": 14.2,
+    "lift_vs_avg": 1.3,
+    "calls_per_conversion": 18.1,
+    "share_of_contacts_pct": 2.5,
+    "share_of_conversions_pct": 3.1
+   },
+   {
+    "job": "admin.",
+    "contacts": 10419,
+    "conversions": 1351,
+    "conv_rate_pct": 13.0,
+    "lift_vs_avg": 1.2,
+    "calls_per_conversion": 20.2,
+    "share_of_contacts_pct": 25.3,
+    "share_of_conversions_pct": 29.1
+   },
+   {
+    "job": "unknown",
+    "contacts": 330,
+    "conversions": 37,
+    "conv_rate_pct": 11.2,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 23.6,
+    "share_of_contacts_pct": 0.8,
+    "share_of_conversions_pct": 0.8
+   },
+   {
+    "job": "management",
+    "contacts": 2924,
+    "conversions": 328,
+    "conv_rate_pct": 11.2,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 22.1,
+    "share_of_contacts_pct": 7.1,
+    "share_of_conversions_pct": 7.1
+   },
+   {
+    "job": "technician",
+    "contacts": 6739,
+    "conversions": 730,
+    "conv_rate_pct": 10.8,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 23.8,
+    "share_of_contacts_pct": 16.4,
+    "share_of_conversions_pct": 15.7
+   },
+   {
+    "job": "self-employed",
+    "contacts": 1421,
+    "conversions": 149,
+    "conv_rate_pct": 10.5,
+    "lift_vs_avg": 0.9,
+    "calls_per_conversion": 25.4,
+    "share_of_contacts_pct": 3.5,
+    "share_of_conversions_pct": 3.2
+   },
+   {
+    "job": "housemaid",
+    "contacts": 1060,
+    "conversions": 106,
+    "conv_rate_pct": 10.0,
+    "lift_vs_avg": 0.9,
+    "calls_per_conversion": 26.4,
+    "share_of_contacts_pct": 2.6,
+    "share_of_conversions_pct": 2.3
+   },
+   {
+    "job": "entrepreneur",
+    "contacts": 1456,
+    "conversions": 124,
+    "conv_rate_pct": 8.5,
+    "lift_vs_avg": 0.8,
+    "calls_per_conversion": 29.8,
+    "share_of_contacts_pct": 3.5,
+    "share_of_conversions_pct": 2.7
+   },
+   {
+    "job": "services",
+    "contacts": 3967,
+    "conversions": 323,
+    "conv_rate_pct": 8.1,
+    "lift_vs_avg": 0.7,
+    "calls_per_conversion": 31.8,
+    "share_of_contacts_pct": 9.6,
+    "share_of_conversions_pct": 7.0
+   },
+   {
+    "job": "blue-collar",
+    "contacts": 9253,
+    "conversions": 638,
+    "conv_rate_pct": 6.9,
+    "lift_vs_avg": 0.6,
+    "calls_per_conversion": 37.1,
+    "share_of_contacts_pct": 22.5,
+    "share_of_conversions_pct": 13.8
+   }
+  ],
+  "age_band": [
+   {
+    "age_band": "<25",
+    "contacts": 1067,
+    "conversions": 256,
+    "conv_rate_pct": 24.0,
+    "lift_vs_avg": 2.1,
+    "calls_per_conversion": 9.7,
+    "share_of_contacts_pct": 2.6,
+    "share_of_conversions_pct": 5.5
+   },
+   {
+    "age_band": "25-34",
+    "contacts": 13684,
+    "conversions": 1666,
+    "conv_rate_pct": 12.2,
+    "lift_vs_avg": 1.1,
+    "calls_per_conversion": 20.8,
+    "share_of_contacts_pct": 33.2,
+    "share_of_conversions_pct": 35.9
+   },
+   {
+    "age_band": "35-44",
+    "contacts": 13495,
+    "conversions": 1168,
+    "conv_rate_pct": 8.7,
+    "lift_vs_avg": 0.8,
+    "calls_per_conversion": 29.9,
+    "share_of_contacts_pct": 32.8,
+    "share_of_conversions_pct": 25.2
+   },
+   {
+    "age_band": "45-54",
+    "contacts": 8702,
+    "conversions": 752,
+    "conv_rate_pct": 8.6,
+    "lift_vs_avg": 0.8,
+    "calls_per_conversion": 30.6,
+    "share_of_contacts_pct": 21.1,
+    "share_of_conversions_pct": 16.2
+   },
+   {
+    "age_band": "55-64",
+    "contacts": 3566,
+    "conversions": 484,
+    "conv_rate_pct": 13.6,
+    "lift_vs_avg": 1.2,
+    "calls_per_conversion": 19.3,
+    "share_of_contacts_pct": 8.7,
+    "share_of_conversions_pct": 10.4
+   },
+   {
+    "age_band": "65+",
+    "contacts": 662,
+    "conversions": 313,
+    "conv_rate_pct": 47.3,
+    "lift_vs_avg": 4.2,
+    "calls_per_conversion": 4.2,
+    "share_of_contacts_pct": 1.6,
+    "share_of_conversions_pct": 6.7
+   }
+  ],
+  "education": [
+   {
+    "education": "unknown",
+    "contacts": 1730,
+    "conversions": 251,
+    "conv_rate_pct": 14.5,
+    "lift_vs_avg": 1.3,
+    "calls_per_conversion": 17.9,
+    "share_of_contacts_pct": 4.2,
+    "share_of_conversions_pct": 5.4
+   },
+   {
+    "education": "university.degree",
+    "contacts": 12164,
+    "conversions": 1669,
+    "conv_rate_pct": 13.7,
+    "lift_vs_avg": 1.2,
+    "calls_per_conversion": 18.7,
+    "share_of_contacts_pct": 29.5,
+    "share_of_conversions_pct": 36.0
+   },
+   {
+    "education": "professional.course",
+    "contacts": 5240,
+    "conversions": 595,
+    "conv_rate_pct": 11.4,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 22.8,
+    "share_of_contacts_pct": 12.7,
+    "share_of_conversions_pct": 12.8
+   },
+   {
+    "education": "high.school",
+    "contacts": 9512,
+    "conversions": 1031,
+    "conv_rate_pct": 10.8,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 23.7,
+    "share_of_contacts_pct": 23.1,
+    "share_of_conversions_pct": 22.2
+   },
+   {
+    "education": "basic.4y",
+    "contacts": 4176,
+    "conversions": 428,
+    "conv_rate_pct": 10.2,
+    "lift_vs_avg": 0.9,
+    "calls_per_conversion": 25.4,
+    "share_of_contacts_pct": 10.1,
+    "share_of_conversions_pct": 9.2
+   },
+   {
+    "education": "basic.6y",
+    "contacts": 2291,
+    "conversions": 188,
+    "conv_rate_pct": 8.2,
+    "lift_vs_avg": 0.7,
+    "calls_per_conversion": 31.2,
+    "share_of_contacts_pct": 5.6,
+    "share_of_conversions_pct": 4.1
+   },
+   {
+    "education": "basic.9y",
+    "contacts": 6045,
+    "conversions": 473,
+    "conv_rate_pct": 7.8,
+    "lift_vs_avg": 0.7,
+    "calls_per_conversion": 32.4,
+    "share_of_contacts_pct": 14.7,
+    "share_of_conversions_pct": 10.2
+   }
+  ],
+  "prior_outcome": [
+   {
+    "poutcome": "success",
+    "contacts": 1373,
+    "conversions": 894,
+    "conv_rate_pct": 65.1,
+    "lift_vs_avg": 5.8,
+    "calls_per_conversion": 2.8,
+    "share_of_contacts_pct": 3.3,
+    "share_of_conversions_pct": 19.3
+   },
+   {
+    "poutcome": "failure",
+    "contacts": 4252,
+    "conversions": 605,
+    "conv_rate_pct": 14.2,
+    "lift_vs_avg": 1.3,
+    "calls_per_conversion": 14.1,
+    "share_of_contacts_pct": 10.3,
+    "share_of_conversions_pct": 13.0
+   },
+   {
+    "poutcome": "nonexistent",
+    "contacts": 35551,
+    "conversions": 3140,
+    "conv_rate_pct": 8.8,
+    "lift_vs_avg": 0.8,
+    "calls_per_conversion": 30.2,
+    "share_of_contacts_pct": 86.3,
+    "share_of_conversions_pct": 67.7
+   }
+  ],
+  "attempts": [
+   {
+    "attempt_band": "1",
+    "contacts": 17634,
+    "conversions": 2299,
+    "conv_rate_pct": 13.0,
+    "lift_vs_avg": 1.2,
+    "calls_per_conversion": 7.7,
+    "share_of_contacts_pct": 42.8,
+    "share_of_conversions_pct": 49.6
+   },
+   {
+    "attempt_band": "2",
+    "contacts": 10568,
+    "conversions": 1211,
+    "conv_rate_pct": 11.5,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 17.5,
+    "share_of_contacts_pct": 25.7,
+    "share_of_conversions_pct": 26.1
+   },
+   {
+    "attempt_band": "3",
+    "contacts": 5340,
+    "conversions": 574,
+    "conv_rate_pct": 10.8,
+    "lift_vs_avg": 1.0,
+    "calls_per_conversion": 27.9,
+    "share_of_contacts_pct": 13.0,
+    "share_of_conversions_pct": 12.4
+   },
+   {
+    "attempt_band": "4",
+    "contacts": 2650,
+    "conversions": 249,
+    "conv_rate_pct": 9.4,
+    "lift_vs_avg": 0.8,
+    "calls_per_conversion": 42.6,
+    "share_of_contacts_pct": 6.4,
+    "share_of_conversions_pct": 5.4
+   },
+   {
+    "attempt_band": "5-6",
+    "contacts": 2578,
+    "conversions": 195,
+    "conv_rate_pct": 7.6,
+    "lift_vs_avg": 0.7,
+    "calls_per_conversion": 71.1,
+    "share_of_contacts_pct": 6.3,
+    "share_of_conversions_pct": 4.2
+   },
+   {
+    "attempt_band": "7+",
+    "contacts": 2406,
+    "conversions": 111,
+    "conv_rate_pct": 4.6,
+    "lift_vs_avg": 0.4,
+    "calls_per_conversion": 238.5,
+    "share_of_contacts_pct": 5.8,
+    "share_of_conversions_pct": 2.4
+   }
+  ],
+  "quarter": [
+   {
+    "quarter": "2008-Q2",
+    "contacts": 12136,
+    "conversions": 428,
+    "conv_rate_pct": 3.5,
+    "lift_vs_avg": 0.3,
+    "calls_per_conversion": 79.9,
+    "share_of_contacts_pct": 29.5,
+    "share_of_conversions_pct": 9.2
+   },
+   {
+    "quarter": "2008-Q3",
+    "contacts": 11854,
+    "conversions": 678,
+    "conv_rate_pct": 5.7,
+    "lift_vs_avg": 0.5,
+    "calls_per_conversion": 53.6,
+    "share_of_contacts_pct": 28.8,
+    "share_of_conversions_pct": 14.6
+   },
+   {
+    "quarter": "2008-Q4",
+    "contacts": 3692,
+    "conversions": 233,
+    "conv_rate_pct": 6.3,
+    "lift_vs_avg": 0.6,
+    "calls_per_conversion": 30.0,
+    "share_of_contacts_pct": 9.0,
+    "share_of_conversions_pct": 5.0
+   },
+   {
+    "quarter": "2009-Q1",
+    "contacts": 282,
+    "conversions": 126,
+    "conv_rate_pct": 44.7,
+    "lift_vs_avg": 4.0,
+    "calls_per_conversion": 5.6,
+    "share_of_contacts_pct": 0.7,
+    "share_of_conversions_pct": 2.7
+   },
+   {
+    "quarter": "2009-Q2",
+    "contacts": 8965,
+    "conversions": 1230,
+    "conv_rate_pct": 13.7,
+    "lift_vs_avg": 1.2,
+    "calls_per_conversion": 16.0,
+    "share_of_contacts_pct": 21.8,
+    "share_of_conversions_pct": 26.5
+   },
+   {
+    "quarter": "2009-Q3",
+    "contacts": 1214,
+    "conversions": 435,
+    "conv_rate_pct": 35.8,
+    "lift_vs_avg": 3.2,
+    "calls_per_conversion": 5.0,
+    "share_of_contacts_pct": 2.9,
+    "share_of_conversions_pct": 9.4
+   },
+   {
+    "quarter": "2009-Q4",
+    "contacts": 975,
+    "conversions": 436,
+    "conv_rate_pct": 44.7,
+    "lift_vs_avg": 4.0,
+    "calls_per_conversion": 4.0,
+    "share_of_contacts_pct": 2.4,
+    "share_of_conversions_pct": 9.4
+   },
+   {
+    "quarter": "2010-Q1",
+    "contacts": 264,
+    "conversions": 150,
+    "conv_rate_pct": 56.8,
+    "lift_vs_avg": 5.0,
+    "calls_per_conversion": 3.3,
+    "share_of_contacts_pct": 0.6,
+    "share_of_conversions_pct": 3.2
+   },
+   {
+    "quarter": "2010-Q2",
+    "contacts": 615,
+    "conversions": 326,
+    "conv_rate_pct": 53.0,
+    "lift_vs_avg": 4.7,
+    "calls_per_conversion": 3.6,
+    "share_of_contacts_pct": 1.5,
+    "share_of_conversions_pct": 7.0
+   },
+   {
+    "quarter": "2010-Q3",
+    "contacts": 847,
+    "conversions": 446,
+    "conv_rate_pct": 52.7,
+    "lift_vs_avg": 4.7,
+    "calls_per_conversion": 3.7,
+    "share_of_contacts_pct": 2.1,
+    "share_of_conversions_pct": 9.6
+   },
+   {
+    "quarter": "2010-Q4",
+    "contacts": 332,
+    "conversions": 151,
+    "conv_rate_pct": 45.5,
+    "lift_vs_avg": 4.0,
+    "calls_per_conversion": 3.9,
+    "share_of_contacts_pct": 0.8,
+    "share_of_conversions_pct": 3.3
+   }
+  ],
+  "year": [
+   {
+    "year_inferred": 2010,
+    "contacts": 2058,
+    "conversions": 1073,
+    "conv_rate_pct": 52.1,
+    "lift_vs_avg": 4.6,
+    "calls_per_conversion": 3.7,
+    "share_of_contacts_pct": 5.0,
+    "share_of_conversions_pct": 23.1
+   },
+   {
+    "year_inferred": 2009,
+    "contacts": 11436,
+    "conversions": 2227,
+    "conv_rate_pct": 19.5,
+    "lift_vs_avg": 1.7,
+    "calls_per_conversion": 10.9,
+    "share_of_contacts_pct": 27.8,
+    "share_of_conversions_pct": 48.0
+   },
+   {
+    "year_inferred": 2008,
+    "contacts": 27682,
+    "conversions": 1339,
+    "conv_rate_pct": 4.8,
+    "lift_vs_avg": 0.4,
+    "calls_per_conversion": 57.9,
+    "share_of_contacts_pct": 67.2,
+    "share_of_conversions_pct": 28.9
+   }
+  ],
+  "duration": [
+   {
+    "duration_band": "0-60s",
+    "contacts": 4284,
+    "conversions": 1,
+    "conv_rate_pct": 0.0,
+    "lift_vs_avg": 0.0,
+    "calls_per_conversion": 18923.0,
+    "share_of_contacts_pct": 10.4,
+    "share_of_conversions_pct": 0.0
+   },
+   {
+    "duration_band": "60-120s",
+    "contacts": 8628,
+    "conversions": 165,
+    "conv_rate_pct": 1.9,
+    "lift_vs_avg": 0.2,
+    "calls_per_conversion": 131.4,
+    "share_of_contacts_pct": 21.0,
+    "share_of_conversions_pct": 3.6
+   },
+   {
+    "duration_band": "2-3m",
+    "contacts": 7784,
+    "conversions": 398,
+    "conv_rate_pct": 5.1,
+    "lift_vs_avg": 0.4,
+    "calls_per_conversion": 45.7,
+    "share_of_contacts_pct": 18.9,
+    "share_of_conversions_pct": 8.6
+   },
+   {
+    "duration_band": "3-5m",
+    "contacts": 9278,
+    "conversions": 953,
+    "conv_rate_pct": 10.3,
+    "lift_vs_avg": 0.9,
+    "calls_per_conversion": 22.0,
+    "share_of_contacts_pct": 22.5,
+    "share_of_conversions_pct": 20.5
+   },
+   {
+    "duration_band": "5-10m",
+    "contacts": 7738,
+    "conversions": 1438,
+    "conv_rate_pct": 18.6,
+    "lift_vs_avg": 1.6,
+    "calls_per_conversion": 12.2,
+    "share_of_contacts_pct": 18.8,
+    "share_of_conversions_pct": 31.0
+   },
+   {
+    "duration_band": "10m+",
+    "contacts": 3464,
+    "conversions": 1684,
+    "conv_rate_pct": 48.6,
+    "lift_vs_avg": 4.3,
+    "calls_per_conversion": 5.0,
+    "share_of_contacts_pct": 8.4,
+    "share_of_conversions_pct": 36.3
+   }
+  ],
+  "euribor": [
+   {
+    "euribor_band": "<1% (low rates)",
+    "contacts": 3907,
+    "conversions": 1786,
+    "conv_rate_pct": 45.7,
+    "lift_vs_avg": 4.1,
+    "calls_per_conversion": 4.0,
+    "share_of_contacts_pct": 9.5,
+    "share_of_conversions_pct": 38.5
+   },
+   {
+    "euribor_band": "1-3%",
+    "contacts": 9587,
+    "conversions": 1514,
+    "conv_rate_pct": 15.8,
+    "lift_vs_avg": 1.4,
+    "calls_per_conversion": 13.9,
+    "share_of_contacts_pct": 23.3,
+    "share_of_conversions_pct": 32.6
+   },
+   {
+    "euribor_band": "3-4.5%",
+    "contacts": 3602,
+    "conversions": 182,
+    "conv_rate_pct": 5.0,
+    "lift_vs_avg": 0.4,
+    "calls_per_conversion": 37.9,
+    "share_of_contacts_pct": 8.7,
+    "share_of_conversions_pct": 3.9
+   },
+   {
+    "euribor_band": "4.5%+ (high)",
+    "contacts": 24080,
+    "conversions": 1157,
+    "conv_rate_pct": 4.8,
+    "lift_vs_avg": 0.4,
+    "calls_per_conversion": 61.0,
+    "share_of_contacts_pct": 58.5,
+    "share_of_conversions_pct": 24.9
+   }
+  ]
+ },
+ "combo": [
+  {
+   "seg": "cellular | success",
+   "contacts": 1270,
+   "conversions": 828,
+   "conv_rate_pct": 65.2,
+   "lift_vs_avg": 5.8,
+   "calls_per_conversion": 2.8,
+   "share_of_contacts_pct": 3.1,
+   "share_of_conversions_pct": 17.8
+  },
+  {
+   "seg": "cellular | failure",
+   "contacts": 3952,
+   "conversions": 571,
+   "conv_rate_pct": 14.4,
+   "lift_vs_avg": 1.3,
+   "calls_per_conversion": 13.6,
+   "share_of_contacts_pct": 9.6,
+   "share_of_conversions_pct": 12.3
+  },
+  {
+   "seg": "cellular | nonexistent",
+   "contacts": 20913,
+   "conversions": 2453,
+   "conv_rate_pct": 11.7,
+   "lift_vs_avg": 1.0,
+   "calls_per_conversion": 21.5,
+   "share_of_contacts_pct": 50.8,
+   "share_of_conversions_pct": 52.9
+  },
+  {
+   "seg": "telephone | failure",
+   "contacts": 300,
+   "conversions": 34,
+   "conv_rate_pct": 11.3,
+   "lift_vs_avg": 1.0,
+   "calls_per_conversion": 21.9,
+   "share_of_contacts_pct": 0.7,
+   "share_of_conversions_pct": 0.7
+  },
+  {
+   "seg": "telephone | nonexistent",
+   "contacts": 14638,
+   "conversions": 687,
+   "conv_rate_pct": 4.7,
+   "lift_vs_avg": 0.4,
+   "calls_per_conversion": 61.0,
+   "share_of_contacts_pct": 35.5,
+   "share_of_conversions_pct": 14.8
+  }
+ ]
+}

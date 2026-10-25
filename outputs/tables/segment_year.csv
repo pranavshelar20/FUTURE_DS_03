@@ -1,0 +1,4 @@
+year_inferred,contacts,conversions,avg_attempts,total_calls,avg_duration,conv_rate_pct,calls_per_conversion,share_of_contacts_pct,share_of_conversions_pct,lift_vs_avg
+2010,2058,1073,1.9,3921,304.6,52.1,3.7,5.0,23.1,4.6
+2009,11436,2227,2.1,24313,264.4,19.5,10.9,27.8,48.0,1.7
+2008,27682,1339,2.8,77501,252.4,4.8,57.9,67.2,28.9,0.4

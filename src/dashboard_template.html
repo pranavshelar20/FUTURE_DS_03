@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marketing Funnel & Conversion Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--blue:#2563eb;--green:#16a34a;--red:#dc2626;--amber:#d97706;--grey:#94a3b8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--card:#131c2e;--ink:#e5eaf3;--mut:#94a3b8;--line:#243049;--blue:#60a5fa;--green:#4ade80;--red:#f87171;--amber:#fbbf24}}
+:root[data-theme="dark"]{--bg:#0b1220;--card:#131c2e;--ink:#e5eaf3;--mut:#94a3b8;--line:#243049;--blue:#60a5fa;--green:#4ade80;--red:#f87171;--amber:#fbbf24}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.6rem;margin:0}h2{font-size:1.1rem;margin:0 0 4px}.sub{color:var(--mut);font-size:.9rem;margin:4px 0 20px}
+.grid{display:grid;gap:12px}.k{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.kpi b{display:block;font-size:1.6rem}.kpi span{color:var(--mut);font-size:.8rem}
+section{margin-top:24px}.note{color:var(--mut);font-size:.82rem;margin-top:6px}
+.fn{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.fr{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:center;font-size:.85rem}
+.fb{height:34px;border-radius:6px;display:flex;align-items:center;padding-left:10px;color:#fff;font-weight:600;white-space:nowrap}
+.drop{color:var(--red);font-size:.75rem;margin:-2px 0 0 140px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer;font-size:.82rem}
+.tabs button.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.cv{position:relative;height:320px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.82rem}th,td{padding:6px 8px;text-align:right;border-bottom:1px solid var(--line)}th:first-child,td:first-child{text-align:left}th{color:var(--mut);font-weight:600}
+.rec{display:grid;gap:10px}.rec .card{border-left:4px solid var(--green)}.rec h3{margin:0 0 4px;font-size:.95rem}.rec p{margin:0;font-size:.85rem;color:var(--mut)}
+.pill{display:inline-block;background:var(--line);border-radius:999px;padding:1px 8px;font-size:.72rem;margin-left:6px}
+.warn{border-left:4px solid var(--amber)}
+</style></head><body><div class="wrap">
+<h1>Marketing Funnel &amp; Conversion Dashboard</h1>
+<p class="sub">Portuguese bank term-deposit telemarketing campaigns · 41,176 contacts · May 2008 – Nov 2010 · UCI Bank Marketing dataset</p>
+
+<div class="grid k" id="kpis"></div>
+
+<section class="card"><h2>Funnel: where do we lose people?</h2>
+<p class="note">Stages are a call-engagement proxy: Engaged = call &gt;60s, Interested = call &gt;180s, Subscribed = accepted the term deposit.</p>
+<div class="fn" id="funnel"></div></section>
+
+<section class="grid two">
+ <div class="card"><h2>Funnel by channel</h2><div class="cv"><canvas id="chCh"></canvas></div></div>
+ <div class="card"><h2>Funnel by previous-campaign outcome</h2><div class="cv"><canvas id="chPo"></canvas></div></div>
+</section>
+
+<section class="card"><h2>Compare conversion across segments</h2>
+<div class="tabs" id="tabs"></div>
+<div class="cv"><canvas id="chSeg"></canvas></div>
+<div class="tw"><table id="tbl"></table></div>
+<p class="note" id="segNote"></p></section>
+
+<section class="card warn"><h2>Diminishing returns of repeated calling</h2><div id="waste" style="font-size:.9rem"></div></section>
+
+<section><h2>Recommendations</h2><div class="rec" id="recs"></div></section>
+
+<section class="card"><h2>Method &amp; caveats</h2><p class="note" style="font-size:.85rem">
+Dataset has no website-traffic or lead stages, so the funnel is built from call engagement. Call duration is only known after the call, so it explains outcomes but cannot be used to pre-select who to call.
+Month, year and Euribor rate are confounded (2008 was heavy-volume, high-rate; 2009–10 was smaller and targeted), so seasonality should not be read as causal. Year is inferred from the chronological row order. Segment rates are associations, not causal effects.</p></section>
+</div>
+<script>
+const D=__DATA__;
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const f=n=>n.toLocaleString();
+const avg=D.kpi.conv_rate;
+// KPIs
+[["Contacts",f(D.kpi.contacts)],["Subscriptions",f(D.kpi.conversions)],["Overall conversion",avg+"%"],["Engaged rate",D.kpi.engaged_rate+"%"],["Interested rate",D.kpi.interested_rate+"%"],["Calls per sale",D.kpi.calls_per_conv]]
+ .forEach(([l,v])=>document.getElementById("kpis").insertAdjacentHTML("beforeend",`<div class="card kpi"><b>${v}</b><span>${l}</span></div>`));
+// funnel
+const cols=["#2563eb","#3b82f6","#60a5fa","#16a34a"];
+D.funnel.forEach((r,i)=>{const h=document.getElementById("funnel");
+ if(i)h.insertAdjacentHTML("beforeend",`<div class="drop">▼ ${r.step_dropoff_pct}% drop-off (${f(r.users_lost)} lost)</div>`);
+ h.insertAdjacentHTML("beforeend",`<div class="fr"><div>${r.stage}</div><div class="fb" style="width:${Math.max(r.pct_of_contacted,14)}%;background:${cols[i]}">${f(r.users)} · ${r.pct_of_contacted}%</div></div>`)});
+// charts
+Chart.defaults.color=css("--mut");Chart.defaults.borderColor=css("--line");
+const grp=(id,rows,key)=>new Chart(document.getElementById(id),{type:"bar",data:{labels:rows.map(r=>r[key]),
+ datasets:[{label:"Engaged %",data:rows.map(r=>r.engaged_pct),backgroundColor:"#93c5fd"},{label:"Interested %",data:rows.map(r=>r.interested_pct),backgroundColor:"#3b82f6"},{label:"Subscribed %",data:rows.map(r=>r.subscribed_pct),backgroundColor:"#16a34a"}]},
+ options:{maintainAspectRatio:false,scales:{y:{ticks:{callback:v=>v+"%"}}},plugins:{legend:{position:"bottom"}}}});
+grp("chCh",D.funnel_channel,"contact");grp("chPo",D.funnel_prior,"poutcome");
+// segments
+const labels={channel:"Channel",month:"Month",weekday:"Weekday",job:"Job",age_band:"Age band",education:"Education",prior_outcome:"Prior outcome",attempts:"Call attempts",year:"Year (inferred)",quarter:"Quarter",duration:"Call duration",euribor:"Euribor 3m"};
+const notes={month:"High-converting months (Mar, Sep, Oct, Dec) had very few contacts – small, targeted calling, not proof that those months are inherently better.",
+ attempts:"Each extra attempt lowers conversion; 7+ attempts cost ~240 calls per sale.",duration:"Duration is only known after the call – diagnostic, not a targeting variable.",
+ euribor:"Conversion is much higher when rates are low – term deposits are less attractive when other products pay more.",year:"2008 was mass-calling at high rates; 2009–10 was smaller and better targeted."};
+let seg=null;
+const tabs=document.getElementById("tabs");
+Object.keys(labels).forEach((k,i)=>{const b=document.createElement("button");b.textContent=labels[k];b.onclick=()=>show(k);b.id="t_"+k;tabs.appendChild(b)});
+function show(k){document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.id==="t_"+k));
+ const rows=D.seg[k],key=Object.keys(rows[0])[0];
+ if(seg)seg.destroy();
+ seg=new Chart(document.getElementById("chSeg"),{type:"bar",data:{labels:rows.map(r=>r[key]),datasets:[
+  {label:"Conversion rate %",data:rows.map(r=>r.conv_rate_pct),backgroundColor:rows.map(r=>r.conv_rate_pct>=avg?"#2563eb":"#94a3b8")},
+  {type:"line",label:"Overall avg "+avg+"%",data:rows.map(()=>avg),borderColor:"#dc2626",borderDash:[6,4],pointRadius:0,borderWidth:1.5}]},
+  options:{maintainAspectRatio:false,scales:{y:{ticks:{callback:v=>v+"%"}}},plugins:{legend:{position:"bottom"},tooltip:{callbacks:{afterLabel:c=>c.datasetIndex?"":"Contacts: "+f(rows[c.dataIndex].contacts)}}}}});
+ document.getElementById("tbl").innerHTML="<tr><th>"+labels[k]+"</th><th>Contacts</th><th>Sales</th><th>Conv %</th><th>Lift</th><th>Calls / sale</th><th>% of contacts</th><th>% of sales</th></tr>"+
+  rows.map(r=>`<tr><td>${r[key]}</td><td>${f(r.contacts)}</td><td>${f(r.conversions)}</td><td><b>${r.conv_rate_pct}</b></td><td>${r.lift_vs_avg}x</td><td>${r.calls_per_conversion}</td><td>${r.share_of_contacts_pct}</td><td>${r.share_of_conversions_pct}</td></tr>`).join("");
+ document.getElementById("segNote").textContent=notes[k]||"";}
+show("channel");
+// waste
+const w=D.waste;
+document.getElementById("waste").innerHTML=`Contacts that received <b>5 or more calls</b> consumed <b>${w.calls_share_att5plus}%</b> of all call attempts but produced only <b>${w.conv_share_att5plus}%</b> of subscriptions (${w.rate_att5plus}% conversion vs ${w.rate_att1}% for customers reached on the first call).`;
+// recs
+[["1. Make cellular the default channel","Cellular converts at 14.7% vs 5.2% for landline and needs ~16 calls per sale vs ~55. Shift dialing capacity from landline to mobile; only use landline as a fallback."],
+ ["2. Cap attempts at 3–4 per lead","Conversion drops from 13% (1st call) to 6% (5+). Contacts with 5+ attempts burn 38% of calls for 7% of sales. Reinvest those calls into fresh leads."],
+ ["3. Prioritise warm, previously-successful customers","Prior-success contacts convert at 65% (5.8x average) and the 'Interested → Subscribed' step is 92%. Build a retention/cross-sell list and call them first."],
+ ["4. Target high-propensity segments","Students (31%), retirees (25%), and under-25 / 65+ age bands convert at 2–4x the average but together make up well under 10% of contacts. Blue-collar and services are the biggest, lowest-yield pools."],
+ ["5. Fix the Engaged → Interested drop (44%)","Nearly half of engaged callers hang up before 3 minutes. Test opening scripts, a clearer value hook in the first 60 seconds, and rate-aware messaging."],
+ ["6. Fix Interested → Subscribed (77% drop)","Only 23% of 3+ min conversations close. Add a follow-up (SMS/email with offer summary), clearer next step, and objection-handling training."],
+ ["7. Time campaigns to the rate environment","Conversion is ~4x average when Euribor &lt;1% vs 0.4x above 3%. Plan volume and offer design around rate cycles, and tailor the pitch when rates are high."]]
+ .forEach(([h,p])=>document.getElementById("recs").insertAdjacentHTML("beforeend",`<div class="card"><h3>${h}</h3><p>${p}</p></div>`));
+</script></body></html>

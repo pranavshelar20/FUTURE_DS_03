@@ -1,0 +1,3 @@
+contact,contacts,conversions,avg_attempts,total_calls,avg_duration,conv_rate_pct,calls_per_conversion,share_of_contacts_pct,share_of_conversions_pct,lift_vs_avg
+cellular,26135,3852,2.4,62861,263.6,14.7,16.3,63.5,83.0,1.3
+telephone,15041,787,2.9,42874,249.2,5.2,54.5,36.5,17.0,0.5
