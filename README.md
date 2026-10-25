@@ -4,7 +4,7 @@
 
 An end-to-end funnel analysis of **41,176 bank telemarketing contacts** (term-deposit campaign, 2008–2010) with an interactive dashboard, a written report and actionable recommendations.
 
-**Dashboard:** `dashboard/index.html` (open locally, or enable GitHub Pages → `/dashboard`)
+**Dashboard:https://YOUR-USERNAME.github.io/FUTURE_DS_03/dashboard/
 **Full write-up:** [`REPORT.md`](REPORT.md)
 
 ## Headline results
